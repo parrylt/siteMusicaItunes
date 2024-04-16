@@ -23,11 +23,10 @@
 
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Cliente
+            Perfil
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="{{route('showFormulario-cadastro')}}">Cadastrar</a></li>
-            <li><a class="dropdown-item" href="{{route('gerenciar-cliente')}}">Gerenciar</a></li>
+            <li><a class="dropdown-item" href="{{route('gerenciar-cliente')}}">Ver Perfil</a></li>
           
         </ul>
         </li>
@@ -39,7 +38,7 @@
           </a>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="{{route('show-cadastro-musicas')}}">Cadastrar</a></li>
-            <li><a class="dropdown-item" href="{{route('gerenciar-cliente')}}">Gerenciar</a></li>
+            <li><a class="dropdown-item" href="{{route('mostrar-musicas')}}">Ver Musicas</a></li>
           
         </ul>
         </li>

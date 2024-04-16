@@ -71,7 +71,7 @@ Route::get('/gerenciarReserva',[ReservaController::class,'gerenciarReserva'])->n
 
 ///////////////////////
 Route::get('/cadastrar-musicas',[MusicasController::class,'showCadastroMusicas'])->name('show-cadastro-musicas');
-Route::post('/escolher-quarto',[QuartoController::class,'cadQuarto'])->name('envia-banco-quarto');
+Route::post('/cadastrar-musicas',[MusicasController::class,'cadMusicas'])->name('envia-banco-musica');
 Route::get('/gerenciarQuarto',[QuartoController::class,'gerenciarQuarto'])->name('gerenciar-quarto');
 Route::get('/alterar-quarto/{id}',[QuartoController::class,'mostrarGerenciarQuartoId'])->name('mostrar-quarto');
 Route::put('/altera-quarto/{id}',[QuartoController::class,'alterarQuartoBanco'])->name('alterar-quarto');

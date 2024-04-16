@@ -1,6 +1,7 @@
 @extends('layout')
 @section('content')
-<form>
+<form method="POST" action="{{route('envia-banco-musica')}}">
+@csrf
   <div class="row mb-3">
     <label for="inputEmail3" class="col-sm-2 col-form-label">Nome:</label>
     <div class="col-sm-10">

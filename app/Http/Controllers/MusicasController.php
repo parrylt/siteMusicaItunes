@@ -24,7 +24,7 @@ class MusicasController extends Controller
             'valor' => 'numeric|required'
         ]);
 
-        Quarto::create($dadosValidos);
+        Musicas::create($dadosValidos);
 
         return view('home');
     }
