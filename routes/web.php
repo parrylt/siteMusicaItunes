@@ -5,6 +5,7 @@ use App\Http\Controllers\ClienteController;
 use App\Http\Controllers\FuncionarioController;
 use App\Http\Controllers\QuartoController;
 use App\Http\Controllers\ReservaController;
+use App\Http\Controllers\MusicasController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -66,6 +67,13 @@ Route::get('/fazer-reserva',[ReservaController::class,'showFormularioReserva'])-
 Route::post('/fazer-reserva',[ReservaController::class,'cadReserva'])->name('envia-banco-reserva');
 Route::get('/gerenciarReserva',[ReservaController::class,'gerenciarReserva'])->name('gerenciar-reserva');
 
+///////////////////////
+Route::get('/cadastrar-musicas',[MusicasController::class,'showCadastroMusicas'])->name('show-cadastro-musicas');
+Route::post('/escolher-quarto',[QuartoController::class,'cadQuarto'])->name('envia-banco-quarto');
+Route::get('/gerenciarQuarto',[QuartoController::class,'gerenciarQuarto'])->name('gerenciar-quarto');
+Route::get('/alterar-quarto/{id}',[QuartoController::class,'mostrarGerenciarQuartoId'])->name('mostrar-quarto');
+Route::put('/altera-quarto/{id}',[QuartoController::class,'alterarQuartoBanco'])->name('alterar-quarto');
+Route::delete('/apaga-quarto/{id}',[QuartoController::class,'destroy'])->name('apaga-quarto');
 
 
 });
