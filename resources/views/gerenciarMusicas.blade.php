@@ -1,8 +1,9 @@
 @extends('layout')
 @section('content')
-<section class="container m-5">
-  <div class="container m-5">
-    <h1 class="text-center">Gerenciar Dados da Musica</h1>
+<section class="container ">
+  <div class="container">
+    <h1 class="text">Gerenciar Dados da Musica</h1>
+    </br>
     <form method='get' action="{{route('gerenciar-musicas')}}">
       <div class="row center">
         <div class="col">
@@ -14,38 +15,43 @@
       </div>
     </form>
   </div>
+
+</br>
+
   <table class="table">
-    <thead>
-      <tr>
-      <th scope="col">id</th>
-        <th scope="col">Número do Quarto</th>
-        <th scope="col">Editar</th>
-        <th scope="col">Valor</th>
-        <th scope="col">Excluir</th>
-      </tr>
-    </thead>
+
     <tbody>
      
     @foreach($registroMusicas as $registroMusicasLoop)
 
 
       <tr>
-      <th scope="row">{{$registroMusicasLoop->id}}</th>
-        <td>{{$registroMusicasLoop->nome}}</td>
-        <td>{{$registroMusicasLoop->genero}}</td>
-        <td>{{$registroMusicasLoop->valor}}</td>
-        <td>
-          <a href="{{route('mostrar-musicas', $registroMusicasLoop->id)}}">
-            <button type="button" class="btn btn-primary">O</button>
-          </a>
-        </td>
-        <td>
-        <form method="post" action="{{route('apaga-musicas', $registroMusicasLoop->id)}}">
+      <div class="d-flex justify-content-center">
+      <div class="card" style="width: 18rem;">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title text-center fw-bolder">{{$registroMusicasLoop->nome}}</h5>
+            </br>
+          <p class="card-text">Genero: &nbsp; {{$registroMusicasLoop->genero}}</p>
+          <p class="card-text ">Valor: &nbsp; {{$registroMusicasLoop->valor}}</p>
+          
+          <div class="d-flex justify-content-evenly">
+          <a href="{{route('mostrar-musicas', $registroMusicasLoop->id)}}" class="btn btn-primary ">Editar</a>
+          <form method="post" action="{{route('apaga-musicas', $registroMusicasLoop->id)}}">
           @method('delete')
           @csrf
           <button type="submit" class="btn btn-danger"> X </button>
-         </form>
-        </td>
+  
+          </div>
+        </form>
+        </div>
+      </div>
+
+      </div>
+
+      </br>
+
+</div>
       </tr>
     @endforeach
     </tbody>
