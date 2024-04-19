@@ -72,11 +72,10 @@ Route::get('/gerenciarReserva',[ReservaController::class,'gerenciarReserva'])->n
 ///////////////////////
 Route::get('/cadastrar-musicas',[MusicasController::class,'showCadastroMusicas'])->name('show-cadastro-musicas');
 Route::post('/cadastrar-musicas',[MusicasController::class,'cadMusicas'])->name('envia-banco-musica');
-Route::get('/gerenciarQuarto',[QuartoController::class,'gerenciarQuarto'])->name('gerenciar-quarto');
-Route::get('/alterar-quarto/{id}',[QuartoController::class,'mostrarGerenciarQuartoId'])->name('mostrar-quarto');
-Route::put('/altera-quarto/{id}',[QuartoController::class,'alterarQuartoBanco'])->name('alterar-quarto');
-Route::delete('/apaga-quarto/{id}',[QuartoController::class,'destroy'])->name('apaga-quarto');
-
+Route::get('/gerenciarMusicas',[MusicasController::class,'gerenciarMusicas'])->name('gerenciar-musicas');
+Route::get('/alterar-musicas/{id}',[MusicasController::class,'mostrarGerenciarMusicasId'])->name('mostrar-musicas');
+Route::put('/altera-musicas/{id}',[MusicasController::class,'alterarMusicasBanco'])->name('alterar-musicas');
+Route::delete('/apaga-musicas/{id}',[MusicasController::class,'destroy'])->name('apaga-musicas');
 
 });
 
