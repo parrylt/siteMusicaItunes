@@ -7,7 +7,7 @@
     <form method='get' action="{{route('gerenciar-musicas')}}">
       <div class="row center">
         <div class="col">
-          <input type="number" id="nome" name="numero" class="form-control" placeholder="Digite o Número do Quarto" aria-label="Número">
+          <input type="text" id="nome" name="nome" class="form-control" placeholder="Digite o Nome da Musica" aria-label="Número">
         </div>
         <div class="col">
           <button type="submit" class="btn btn-info">Buscar</button>

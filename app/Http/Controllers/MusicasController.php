@@ -38,13 +38,13 @@ class MusicasController extends Controller
     //funcao para gerenciar os dados
     public function gerenciarMusicas(Request $request){
 
-        $dadosQuarto = Musicas::query();
-        $dadosQuarto->when($request->numero,function($query,$valor){
-            $query->where('numero','like','%'.$valor.'%');
+        $dadosMusica = Musicas::query();
+        $dadosMusica->when($request->nome,function($query,$valor){
+            $query->where('nome','like','%'.$valor.'%');
         });
-        $dadosQuarto = $dadosQuarto->get();
+        $dadosMusica = $dadosMusica->get();
 
-        return view('gerenciarMusicas',['registroMusicas' => $dadosQuarto]);
+        return view('gerenciarMusicas',['registroMusicas' => $dadosMusica]);
     }
 
     //apagar dados salvos
