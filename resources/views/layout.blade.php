@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gestão de controle de Hotel</title>
+    <title>Site de Musicas</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
 <body>
@@ -23,63 +23,26 @@
 
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Perfil
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="{{route('gerenciar-cliente')}}">Ver Perfil</a></li>
-          
-        </ul>
-        </li>
-
-
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Musica
           </a>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="{{route('show-cadastro-musicas')}}">Cadastrar</a></li>
-            <li><a class="dropdown-item" href="{{route('mostrar-musicas')}}">Ver Musicas</a></li>
-          
-        </ul>
-        </li>
-
-
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Funcionario
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="{{route('show-Formulario-funcionario')}}">Cadastrar</a></li>
-            <li><a class="dropdown-item" href="{{'/gerenciarFuncionario'}}">Gerenciar</a></li>
-            
-        </ul>
-        </li>
-
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Quarto
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="{{route('show-Formulario-quarto')}}">Cadastrar</a></li>
-            <li><a class="dropdown-item" href="{{'/gerenciarQuarto'}}">Gerenciar</a></li>
-            
-        </ul>
-        </li>
-
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Reserva
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="{{route('show-Formulario-reserva')}}">Cadastrar</a></li>
-            <li><a class="dropdown-item" href="{{'/gerenciarReserva'}}">Gerenciar</a></li>
-            
+            <li><a class="dropdown-item" href="{{route('gerenciar-musicas')}}">Gerenciar</a></li>
         </ul>
         </li>
 
 
       </ul>
       
+      <form class="form-inline my-2 my-lg-0">
+      <li class="nav-item dropdown d-flex justify-content-end" title="ver perfil">
+          <a class="nav-link dropdown-item" href="{{route('profile.edit')}}">
+          {{ Auth::user()->name }}
+          </a>
+        </li>
+
+    </form>
+
     </div>
   </div>
 </nav>
@@ -97,4 +60,5 @@
 
 
 </body>
+
 </html>

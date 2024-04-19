@@ -30,38 +30,38 @@ class MusicasController extends Controller
     }
 
     //funcao para mostrar os dados gerenciados para nos
-    public function mostrarGerenciarQuartoId(Quarto $id){
+    public function mostrarGerenciarMusicaId(Musicas $id){
 
-        return view('formularioAlterarQuarto',['registroQuartos' => $id]);
+        return view('formularioAlterarMusica',['registroMusicas' => $id]);
     }
 
     //funcao para gerenciar os dados
-    public function gerenciarQuarto (Request $request){
+    public function gerenciarMusicas(Request $request){
 
-        $dadosQuarto = Quarto::query();
+        $dadosQuarto = Musicas::query();
         $dadosQuarto->when($request->numero,function($query,$valor){
             $query->where('numero','like','%'.$valor.'%');
         });
         $dadosQuarto = $dadosQuarto->get();
 
-        return view('gerenciarQuarto',['registroQuartos' => $dadosQuarto]);
+        return view('gerenciarMusicas',['registroMusicas' => $dadosQuarto]);
     }
 
     //apagar dados salvos
-    public function destroy(Quarto $id){
+    public function destroy(Musicas $id){
         
         $id->delete();
         return Redirect::route('home');
     }
 
     //alterar dados registrados do cliente
-    public function alterarQuartoBanco(Quarto $id,Request $request){
+    public function alterarMusicasBanco(Musicas $id,Request $request){
 
         //o request e uma variavel que contem os dados cadastrados no formulario por post
         //ele ira validar se esses dados do validardados existe, so assim para eles serem salvos
         $dadosValidos = $request->validate([
-            'numero' => 'integer|required',
-            'tipo' => 'string|required',
+            'nome' => 'string|required',
+            'genero' => 'string|required',
             'valor' => 'numeric|required'
         ]);
 
