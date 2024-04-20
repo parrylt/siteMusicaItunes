@@ -13,7 +13,9 @@ return new class extends Migration
     {
         Schema::create('musicas', function (Blueprint $table) {
             $table->id();
+            $table->string('image');
             $table->string('nome');
+            $table->string('banda');
             $table->string('genero');
             $table->decimal('valor', 8,2)->nullable();
             $table->timestamps();
