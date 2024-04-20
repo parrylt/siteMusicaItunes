@@ -21,7 +21,9 @@ class MusicasController extends Controller
         $dadosValidos = $request->validate([
             'nome' => 'string|required',
             'genero' => 'string|required',
-            'valor' => 'numeric|required'
+            'valor' => 'numeric|required',
+            'img' => 'string|required',
+            'autor' => 'string|required',
         ]);
 
         Musicas::create($dadosValidos);

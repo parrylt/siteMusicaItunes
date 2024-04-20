@@ -1,6 +1,6 @@
 @extends('layout')
 @section('content')
-</br>
+<br>
 <form method="POST" action="{{route('envia-banco-musica')}}">
 @csrf
   <div class="row mb-3">
@@ -11,9 +11,9 @@
   </div>
 
   <div class="row mb-3">
-    <label for="inputPassword3" class="col-sm-2 col-form-label">Autor:</label>
+    <label for="inputEmail3" class="col-sm-2 col-form-label">Autor:</label>
     <div class="col-sm-10">
-      <input type="text" class="form-control" id="inputPassword3" name="autor">
+      <input type="text" class="form-control" id="inputEmail3" name="autor">
     </div>
   </div>
 
@@ -32,9 +32,9 @@
   </div>
 
   <div class="row mb-3">
-    <label for="inputPassword3" class="col-sm-2 col-form-label">Imagem:</label>
+    <label for="inputPassword3" class="col-sm-2 col-form-label" >Imagem:</label>
     <div class="col-sm-10">
-      <input type="text" class="form-control" id="inputPassword3" name="genero">
+      <input type="text" class="form-control" id="inputPassword3" name="img" placeholder="insira o nome e tipo da imagem">
     </div>
   </div>
 

@@ -12,5 +12,7 @@ class Musicas extends Model
         'nome',
         'genero',
         'valor',
+        'img',
+        'autor',
     ];
 }
