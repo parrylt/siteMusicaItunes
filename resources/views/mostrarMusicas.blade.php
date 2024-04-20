@@ -1,9 +1,6 @@
 @extends('layout')
 @section('content')
 <section class="container m-5">
-  <div class="container m-5">
-    <h1 class="text-center">Ver Musicas</h1>
-  </div>
 
   
   <table class="table">

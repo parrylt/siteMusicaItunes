@@ -28,6 +28,10 @@ use Illuminate\Support\Facades\Route;
 //     return view('dashboard');
 // })->middleware(['auth', 'verified'])->name('dashboard');
 
+Route::get('/', function () {
+    return view('index');
+});
+
 route::get('/home', [HomeController::class,'index'])->middleware('auth')->name('home');
 
 route::get('post', [HomeController::class, 'post'])->middleware(['auth', 'admin']);
@@ -38,12 +42,21 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
 
+Route::get('/admin-home', [ClienteController::class,'showHome'])->name('showAdmin-home');
+
+
 Route::get('/cadastro-cliente', [ClienteController::class,'showFormularioCadastro'])->name('showFormulario-cadastro');
 Route::post('/cadastro-cliente',[ClienteController::class,'cadCliente'])->name('envia-banco-cliente');
 Route::get('/gerenciar-cliente',[ClienteController::class,'gerenciarCliente'])->name('gerenciar-cliente');
 Route::get('/alterar-cliente/{id}',[ClienteController::class,'mostrarGerenciarClienteId'])->name('mostrar-cliente');
 Route::put('/altera-cliente/{id}',[ClienteController::class,'alterarClienteBanco'])->name('alterar-cliente');
 Route::delete('/apaga-cliente/{id}',[ClienteController::class,'destroy'])->name('apaga-cliente');
+
+///////////////////////
+
+Route::get('/gerenciar-usuario',[ClienteController::class,'gerenciarUsuario'])->name('gerenciar-usuario');
+Route::get('/alterar-usuario/{id}',[ClienteController::class,'mostrarGerenciarUsuarioId'])->name('mostrar-usuario');
+Route::delete('/apaga-usuario/{id}',[ClienteController::class,'destroyUser'])->name('apaga-usuario');
 
 ///////////////////////
 

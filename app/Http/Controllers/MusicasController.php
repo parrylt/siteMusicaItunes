@@ -9,7 +9,7 @@ use App\Models\Musicas;
 class MusicasController extends Controller
 {
     public function showHome(){
-        return view('home');
+        return view('admin/adminhome');
     }
 
 
@@ -28,7 +28,7 @@ class MusicasController extends Controller
 
         Musicas::create($dadosValidos);
 
-        return view('home');
+        return view('admin/adminhome');
     }
 
     //funcao para mostrar os dados gerenciados para nos
@@ -58,7 +58,7 @@ class MusicasController extends Controller
     public function destroy(Musicas $id){
         
         $id->delete();
-        return Redirect::route('home');
+        return Redirect::route('admin/adminhome');
     }
 
     //alterar dados registrados do cliente
@@ -79,7 +79,7 @@ class MusicasController extends Controller
         //salvar dados 
         $id->save();
 
-        return Redirect::route('home');
+        return Redirect::route('admin/adminhome');
 
     }
 

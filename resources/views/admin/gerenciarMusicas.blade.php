@@ -2,12 +2,12 @@
 @section('content')
 <section class="container ">
   <div class="container">
-    <h1 class="text">Gerenciar Dados da Musica</h1>
+    <h1 class="text">Gerenciador de Músicas</h1>
     </br>
     <form method='get' action="{{route('gerenciar-musicas')}}">
       <div class="row center">
         <div class="col">
-          <input type="number" id="nome" name="numero" class="form-control" placeholder="Digite o Número do Quarto" aria-label="Número">
+          <input type="number" id="nome" name="numero" class="form-control" placeholder="Digite o Número da Música" aria-label="Número">
         </div>
         <div class="col">
           <button type="submit" class="btn btn-info">Buscar</button>

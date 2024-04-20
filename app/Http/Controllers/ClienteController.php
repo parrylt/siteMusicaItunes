@@ -5,11 +5,12 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 use App\Models\Cliente;
+use App\Models\User;
 
 class ClienteController extends Controller
 {
     public function showHome(){
-        return view('home');
+        return view('admin/adminhome');
     }
 
     //funcao para o formulario de cadastro do cliente
@@ -29,7 +30,7 @@ class ClienteController extends Controller
         //o create e para inserir ou criar um novo dado
         Cliente::create($dadosValidos);
 
-        return Redirect::route('home');
+        return Redirect::route('admin/adminhome');
     }
 
     //funcao para mostrar os dados gerenciados para nos
@@ -54,7 +55,7 @@ class ClienteController extends Controller
     public function destroy(Cliente $id){
         
         $id->delete();
-        return Redirect::route('home');
+        return Redirect::route('admin/adminhome');
     }
 
     //alterar dados registrados do cliente
@@ -72,6 +73,30 @@ class ClienteController extends Controller
         $id->fill($dadosValidos);
         //salvar dados 
         $id->save();
-        return Redirect::route('home');
+        return Redirect::route('admin/adminhome');
+    }
+
+    public function mostrarGerenciarUsuarioId (User $id){
+
+        return view('formularioAlterarUsuario',['registroUsarios' => $id]);
+    }
+
+    //funcao para gerenciar os dados
+    public function gerenciarUsuario (Request $request){
+
+        $dadosUsuario = User::query();
+        $dadosUsuario->when($request->nome,function($query,$valor){
+            $query->where('name','like','%'.$valor.'%');
+        });
+        $dadosUsuario = $dadosUsuario->get();
+
+        return view('admin/gerenciarUsuario',['registroUsuarios' => $dadosUsuario]);
+    }
+
+    //apagar dados salvos
+    public function destroyUser (User $id){
+        
+        $id->delete();
+        return Redirect::route('admin/adminhome');
     }
 }
