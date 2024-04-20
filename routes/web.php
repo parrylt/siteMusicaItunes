@@ -54,21 +54,6 @@ Route::get('/alterar-funcionario/{id}',[FuncionarioController::class,'mostrarGer
 Route::put('/altera-funcionario/{id}',[FuncionarioController::class,'alterarFuncionarioBanco'])->name('alterar-funcionario');
 Route::delete('/apaga-funcionario/{id}',[FuncionarioController::class,'destroy'])->name('apaga-funcionario');
 
-//////////////////////////
-
-Route::get('/escolher-quarto',[QuartoController::class,'showFormularioQuarto'])->name('show-Formulario-quarto');
-Route::post('/escolher-quarto',[QuartoController::class,'cadQuarto'])->name('envia-banco-quarto');
-Route::get('/gerenciarQuarto',[QuartoController::class,'gerenciarQuarto'])->name('gerenciar-quarto');
-Route::get('/alterar-quarto/{id}',[QuartoController::class,'mostrarGerenciarQuartoId'])->name('mostrar-quarto');
-Route::put('/altera-quarto/{id}',[QuartoController::class,'alterarQuartoBanco'])->name('alterar-quarto');
-Route::delete('/apaga-quarto/{id}',[QuartoController::class,'destroy'])->name('apaga-quarto');
-
-//////////////////////
-
-Route::get('/fazer-reserva',[ReservaController::class,'showFormularioReserva'])->name('show-Formulario-reserva');
-Route::post('/fazer-reserva',[ReservaController::class,'cadReserva'])->name('envia-banco-reserva');
-Route::get('/gerenciarReserva',[ReservaController::class,'gerenciarReserva'])->name('gerenciar-reserva');
-
 ///////////////////////
 Route::get('/cadastrar-musicas',[MusicasController::class,'showCadastroMusicas'])->name('show-cadastro-musicas');
 Route::post('/cadastrar-musicas',[MusicasController::class,'cadMusicas'])->name('envia-banco-musica');
