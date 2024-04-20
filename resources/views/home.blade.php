@@ -19,7 +19,7 @@
                 <p class="card-text">Em nosso site, você terá acesso a uma coleção cuidadosamente selecionada de músicas, cada uma contendo sua própria magia e mistério. Você pode explorar livremente, permitindo que as melodias guiem sua jornada através de paisagens sonoras únicas.</p>
                 <p class="card-text">Saiba que aqui nos concentramos na experiência musical pura. Você terá acesso apenas ao nome da música, ao tempo de execução e ao nome do autor. Deixe-se levar pela música e permita que ela fale por si mesma, sem influências externas.</p>
                 <p class="card-text">Preparamos este espaço como um refúgio para os amantes da música, onde você pode se perder nas melodias e encontrar inspiração em cada acorde. Seja bem-vindo ao nosso universo musical, onde as palavras são substituídas pelo som e onde cada nota conta uma história única.</p>
-                <a href="{{route('show-cadastro-musicas')}}" class="btn btn-primary">Go somewhere</a>
+                <a href="{{route('ver-musicas')}}" class="btn btn-primary">Explorar Musicas</a>
             </div>
             <div class="card-footer text-muted">
             </div>

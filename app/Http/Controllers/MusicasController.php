@@ -35,6 +35,12 @@ class MusicasController extends Controller
         return view('formularioAlterarMusica',['registroMusicas' => $id]);
     }
 
+    // funcao mostrar todas as musicas para o usuario
+    public function mostrarMusicas(Request $request){
+        $dadosMusicas = Musicas::all();
+        return view('mostrarMusicas',['registroMusicas' => $dadosMusicas]);
+    }
+
     //funcao para gerenciar os dados
     public function gerenciarMusicas(Request $request){
 

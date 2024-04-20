@@ -15,11 +15,12 @@
 
       <tr>
       <div class="card" style="width: 18rem;">
-  <img src="..." class="card-img-top" alt="...">
+  <img src="assets/{{$registroMusicasLoop->img}}" class="card-img-top" alt="...">
   <div class="card-body">
-    <p class="card-text">{{$registroMusicasLoop->nome}}</p>
-    <p class="card-text">{{$registroMusicasLoop->genero}}</p>
-    <p class="card-text">{{$registroMusicasLoop->valor}}</p>
+  <h5 class="card-title text-center fw-bolder">{{$registroMusicasLoop->nome}}</h5>
+            </br>
+    <p class="card-text">Genero: &nbsp;{{$registroMusicasLoop->genero}}</p>
+    <p class="card-text">Valor: &nbsp;{{$registroMusicasLoop->valor}}</p>
   </div>
 </div>
       </tr>

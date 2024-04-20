@@ -40,7 +40,7 @@
           <form method="post" action="{{route('apaga-musicas', $registroMusicasLoop->id)}}">
           @method('delete')
           @csrf
-          <button type="submit" class="btn btn-danger"> X </button>
+          <button type="submit" class="btn btn-danger"> Deletar </button>
   
           </div>
         </form>
