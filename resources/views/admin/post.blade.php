@@ -1,1 +1,0 @@
-<h1>Admin página</h1>
