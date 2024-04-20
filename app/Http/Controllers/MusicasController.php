@@ -14,12 +14,14 @@ class MusicasController extends Controller
 
 
     public function showCadastroMusicas(Request $request){
-        return view('cadastroMusica');
+        return view('admin/cadastroMusica');
     }
 
     public function cadMusicas(Request $request){
         $dadosValidos = $request->validate([
+            'image' => 'string|required',
             'nome' => 'string|required',
+            'banda' => 'string|required',
             'genero' => 'string|required',
             'valor' => 'numeric|required',
             'img' => 'string|required',
@@ -52,7 +54,8 @@ class MusicasController extends Controller
         });
         $dadosMusica = $dadosMusica->get();
 
-        return view('gerenciarMusicas',['registroMusicas' => $dadosMusica]);
+
+        return view('admin/gerenciarMusicas',['registroMusicas' => $dadosQuarto]);
     }
 
     //apagar dados salvos
@@ -68,7 +71,9 @@ class MusicasController extends Controller
         //o request e uma variavel que contem os dados cadastrados no formulario por post
         //ele ira validar se esses dados do validardados existe, so assim para eles serem salvos
         $dadosValidos = $request->validate([
+            'image' => 'string|required',
             'nome' => 'string|required',
+            'banda' => 'string|required',
             'genero' => 'string|required',
             'valor' => 'numeric|required'
         ]);

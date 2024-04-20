@@ -9,7 +9,9 @@ class Musicas extends Model
 {
     use HasFactory;
     protected $fillable = [
+        'image',
         'nome',
+        'banda',
         'genero',
         'valor',
         'img',
