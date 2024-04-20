@@ -21,7 +21,9 @@ class MusicasController extends Controller
         $dadosValidos = $request->validate([
             'nome' => 'string|required',
             'genero' => 'string|required',
-            'valor' => 'numeric|required'
+            'valor' => 'numeric|required',
+            'img' => 'string|required',
+            'autor' => 'string|required',
         ]);
 
         Musicas::create($dadosValidos);
@@ -33,6 +35,12 @@ class MusicasController extends Controller
     public function mostrarGerenciarMusicaId(Musicas $id){
 
         return view('formularioAlterarMusica',['registroMusicas' => $id]);
+    }
+
+    // funcao mostrar todas as musicas para o usuario
+    public function mostrarMusicas(Request $request){
+        $dadosMusicas = Musicas::all();
+        return view('mostrarMusicas',['registroMusicas' => $dadosMusicas]);
     }
 
     //funcao para gerenciar os dados
