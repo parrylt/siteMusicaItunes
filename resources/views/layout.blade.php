@@ -10,7 +10,7 @@
     <header>
     <nav class="navbar absolute-top navbar-expand-lg bg-body-tertiary ">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Hotel</a>
+    <a class="navbar-brand" href="#">iTunes</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -26,8 +26,7 @@
             Musica
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="{{route('show-cadastro-musicas')}}">Cadastrar</a></li>
-            <li><a class="dropdown-item" href="{{route('gerenciar-musicas')}}">Gerenciar</a></li>
+            <li><a class="dropdown-item" href="{{route('ver-musicas')}}">Ver Musicas</a></li>
         </ul>
         </li>
 
