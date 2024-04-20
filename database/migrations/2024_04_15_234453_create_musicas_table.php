@@ -18,8 +18,6 @@ return new class extends Migration
             $table->string('banda');
             $table->string('genero');
             $table->decimal('valor', 8,2)->nullable();
-            $table->string('img');
-            $table->string('autor');
             $table->timestamps();
         });
     }
