@@ -23,7 +23,9 @@ class MusicasController extends Controller
             'nome' => 'string|required',
             'banda' => 'string|required',
             'genero' => 'string|required',
-            'valor' => 'numeric|required'
+            'valor' => 'numeric|required',
+            'img' => 'string|required',
+            'autor' => 'string|required',
         ]);
 
         Musicas::create($dadosValidos);
@@ -37,14 +39,21 @@ class MusicasController extends Controller
         return view('formularioAlterarMusica',['registroMusicas' => $id]);
     }
 
+    // funcao mostrar todas as musicas para o usuario
+    public function mostrarMusicas(Request $request){
+        $dadosMusicas = Musicas::all();
+        return view('mostrarMusicas',['registroMusicas' => $dadosMusicas]);
+    }
+
     //funcao para gerenciar os dados
     public function gerenciarMusicas(Request $request){
 
-        $dadosQuarto = Musicas::query();
-        $dadosQuarto->when($request->numero,function($query,$valor){
-            $query->where('numero','like','%'.$valor.'%');
+        $dadosMusica = Musicas::query();
+        $dadosMusica->when($request->nome,function($query,$valor){
+            $query->where('nome','like','%'.$valor.'%');
         });
-        $dadosQuarto = $dadosQuarto->get();
+        $dadosMusica = $dadosMusica->get();
+
 
         return view('admin/gerenciarMusicas',['registroMusicas' => $dadosQuarto]);
     }

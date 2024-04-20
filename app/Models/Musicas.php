@@ -14,5 +14,7 @@ class Musicas extends Model
         'banda',
         'genero',
         'valor',
+        'img',
+        'autor',
     ];
 }
