@@ -16,7 +16,7 @@
       <tr>
       <div class="d-flex justify-content-center">
       <div class="card" style="width: 18rem;">
-  <img src="assets/{{$registroMusicasLoop->img}}" class="card-img-top" alt="...">
+  <img src="{{$registroMusicasLoop->image}}" class="card-img-top" alt="...">
   <div class="card-body">
   <h5 class="card-title text-center fw-bolder">{{$registroMusicasLoop->nome}}</h5>
             </br>

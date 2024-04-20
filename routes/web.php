@@ -58,7 +58,8 @@ Route::delete('/apaga-funcionario/{id}',[FuncionarioController::class,'destroy']
 Route::get('/cadastrar-musicas',[MusicasController::class,'showCadastroMusicas'])->name('show-cadastro-musicas');
 Route::post('/cadastrar-musicas',[MusicasController::class,'cadMusicas'])->name('envia-banco-musica');
 Route::get('/gerenciarMusicas',[MusicasController::class,'gerenciarMusicas'])->name('gerenciar-musicas');
-Route::get('/alterar-musicas/{id}',[MusicasController::class,'mostrarGerenciarMusicasId'])->name('mostrar-musicas');
+Route::get('/ver-musicas',[MusicasController::class,'mostrarMusicas'])->name('ver-musicas');
+Route::get('/alterar-musicas/{id}',[MusicasController::class,'mostrarGerenciarMusicaId'])->name('mostrar-musicas');
 Route::put('/altera-musicas/{id}',[MusicasController::class,'alterarMusicasBanco'])->name('alterar-musicas');
 Route::delete('/apaga-musicas/{id}',[MusicasController::class,'destroy'])->name('apaga-musicas');
 
