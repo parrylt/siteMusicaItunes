@@ -16,11 +16,24 @@ Telas do Site de Musicas
 ![image](https://github.com/parrylt/siteMusicaItunes/assets/132522844/d89629aa-d841-4f35-a3e9-be0ae7fb5409)
 
 
-6. **OBS: Para se tornar administrador do site deve-se mudar os dados dentro do phpmyAdmin
+6. **OBS: Para se tornar administrador (admin) do site deve-se mudar os dados dentro do phpmyAdmin
 (musicabd/users)
 ![image](https://github.com/parrylt/siteMusicaItunes/assets/132522844/6e04d46f-a06a-46d7-8be1-820d910892c6)
 ![image](https://github.com/parrylt/siteMusicaItunes/assets/132522844/9e8c25f4-3b32-457e-9994-40e0528f16c4)
 
+7. Cadastro de musicas (Admin)
+![image](https://github.com/parrylt/siteMusicaItunes/assets/132522844/1fbb64d7-f9b9-4746-aa11-75b5fba66636)
+
+
+8. Gerenciamento de musicas (Admin)
+![image](https://github.com/parrylt/siteMusicaItunes/assets/132522844/70bb216c-6ff1-45e0-a078-02320e44ee78)
+
+9. Gerenciamento do Usuario (Admin)
+![image](https://github.com/parrylt/siteMusicaItunes/assets/132522844/aa77c7a7-fe4c-4cb9-8c02-683d9b880e52)
+
+10. Tela do Usuario(User)
+Ao clicar no botão explorar musicas na tela Home este o levara para a tela das musicas onde podera tanto ouvir como ****
+![image](https://github.com/parrylt/siteMusicaItunes/assets/132522844/43b114a4-7b09-4b8c-8f48-82445cfadcbf)
 
 
 
