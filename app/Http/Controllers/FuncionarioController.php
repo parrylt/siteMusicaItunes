@@ -9,7 +9,7 @@ use App\Models\Funcionario;
 class FuncionarioController extends Controller
 {
     public function showFormularioFuncionario(Request $request){
-        return view('cadastroFuncionario');
+        return view('admin/cadastroFuncionario');
     }
 
     public function cadFuncionario(Request $request){
@@ -27,7 +27,7 @@ class FuncionarioController extends Controller
     //funcao para mostrar os dados gerenciados para nos
     public function mostrarGerenciarFuncionarioId(Funcionario $id){
 
-        return view('formularioAlterarFuncionario',['registroFuncionarios' => $id]);
+        return view('admin/formularioAlterarFuncionario',['registroFuncionarios' => $id]);
     }
 
     //funcao para gerenciar os dados
@@ -39,7 +39,7 @@ class FuncionarioController extends Controller
         });
         $dadosFunci = $dadosFunci->get();
 
-        return view('gerenciarFuncionario',['registroFuncionarios' => $dadosFunci]);
+        return view('admin/gerenciarFuncionario',['registroFuncionarios' => $dadosFunci]);
     }
 
     //apagar dados salvos

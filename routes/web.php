@@ -56,6 +56,7 @@ Route::delete('/apaga-cliente/{id}',[ClienteController::class,'destroy'])->name(
 
 Route::get('/gerenciar-usuario',[ClienteController::class,'gerenciarUsuario'])->name('gerenciar-usuario');
 Route::get('/alterar-usuario/{id}',[ClienteController::class,'mostrarGerenciarUsuarioId'])->name('mostrar-usuario');
+Route::put('/altera-usuario/{id}',[ClienteController::class,'alterarUsuarioBanco'])->name('alterar-usuario');
 Route::delete('/apaga-usuario/{id}',[ClienteController::class,'destroyUser'])->name('apaga-usuario');
 
 ///////////////////////
@@ -69,12 +70,14 @@ Route::delete('/apaga-funcionario/{id}',[FuncionarioController::class,'destroy']
 
 ///////////////////////
 Route::get('/cadastrar-musicas',[MusicasController::class,'showCadastroMusicas'])->name('show-cadastro-musicas');
-Route::post('/cadastrar-musicas',[MusicasController::class,'cadMusicas'])->name('envia-banco-musica');
+Route::post('/envia-banco-musica', 'App\Http\Controllers\MusicasController@upload')->name('envia-banco-musica');
 Route::get('/gerenciarMusicas',[MusicasController::class,'gerenciarMusicas'])->name('gerenciar-musicas');
 Route::get('/ver-musicas',[MusicasController::class,'mostrarMusicas'])->name('ver-musicas');
 Route::get('/alterar-musicas/{id}',[MusicasController::class,'mostrarGerenciarMusicaId'])->name('mostrar-musicas');
 Route::put('/altera-musicas/{id}',[MusicasController::class,'alterarMusicasBanco'])->name('alterar-musicas');
 Route::delete('/apaga-musicas/{id}',[MusicasController::class,'destroy'])->name('apaga-musicas');
+
+
 
 });
 

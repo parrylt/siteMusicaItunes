@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 use App\Models\Musicas;
+use Illuminate\Support\Facades\Storage;
 
 class MusicasController extends Controller
 {
@@ -17,24 +18,59 @@ class MusicasController extends Controller
         return view('admin/cadastroMusica');
     }
 
-    public function cadMusicas(Request $request){
+    // public function cadMusicas(Request $request){
+    //     $dadosValidos = $request->validate([
+    //         'image' => 'string|required',
+    //         'nome' => 'string|required',
+    //         'banda' => 'string|required',
+    //         'genero' => 'string|required',
+    //         'valor' => 'numeric|required'
+    //     ]);
+
+    //     Musicas::create($dadosValidos);
+
+    //     return view('admin/adminhome');
+    // }
+
+    public function upload(Request $request)
+    {
+        // Validar os dados recebidos do formulário
         $dadosValidos = $request->validate([
-            'image' => 'string|required',
+            'image' => 'file|required', // Validar o campo de upload da imagem
             'nome' => 'string|required',
             'banda' => 'string|required',
             'genero' => 'string|required',
-            'valor' => 'numeric|required'
+            'valor' => 'numeric|required',
+            'musica' => 'file|required' // Validar o campo de upload da música
         ]);
-
-        Musicas::create($dadosValidos);
-
-        return view('admin/adminhome');
+    
+        // Upload da imagem
+        $imagemPath = $request->file('image')->store('public/imagens');
+        $imagemUrl = Storage::url($imagemPath);
+    
+        // Upload da música
+        $musicaPath = $request->file('musica')->store('public/musicas');
+        $musicaUrl = Storage::url($musicaPath);
+    
+        // Salvar os dados no banco de dados
+        Musicas::create([
+            'image' => $imagemUrl,
+            'nome' => $dadosValidos['nome'],
+            'banda' => $dadosValidos['banda'],
+            'genero' => $dadosValidos['genero'],
+            'valor' => $dadosValidos['valor'],
+            'musica' => $musicaUrl
+        ]);
+    
+        // Redirecionar para a página desejada após o upload
+        return redirect()->back()->with('success', 'Música adicionada com sucesso!');
     }
+
 
     //funcao para mostrar os dados gerenciados para nos
     public function mostrarGerenciarMusicaId(Musicas $id){
 
-        return view('formularioAlterarMusica',['registroMusicas' => $id]);
+        return view('admin/formularioAlterarMusica',['registroMusicas' => $id]);
     }
 
     public function mostrarMusicas(Request $request){
@@ -58,7 +94,7 @@ class MusicasController extends Controller
     public function destroy(Musicas $id){
         
         $id->delete();
-        return Redirect::route('admin/adminhome');
+        return Redirect::route('home');
     }
 
     //alterar dados registrados do cliente
@@ -67,11 +103,10 @@ class MusicasController extends Controller
         //o request e uma variavel que contem os dados cadastrados no formulario por post
         //ele ira validar se esses dados do validardados existe, so assim para eles serem salvos
         $dadosValidos = $request->validate([
-            'image' => 'string|required',
             'nome' => 'string|required',
             'banda' => 'string|required',
             'genero' => 'string|required',
-            'valor' => 'numeric|required'
+            'valor' => 'numeric|required',
         ]);
 
         //fill serve para organizar os dados recadastrados
@@ -79,7 +114,7 @@ class MusicasController extends Controller
         //salvar dados 
         $id->save();
 
-        return Redirect::route('admin/adminhome');
+        return Redirect::route('home');
 
     }
 

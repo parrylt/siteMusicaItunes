@@ -6,9 +6,7 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     */
+
     public function up(): void
     {
         Schema::create('musicas', function (Blueprint $table) {
@@ -18,15 +16,15 @@ return new class extends Migration
             $table->string('banda');
             $table->string('genero');
             $table->decimal('valor', 8,2)->nullable();
+            $table->string('musica');
             $table->timestamps();
         });
     }
 
-    /**
-     * Reverse the migrations.
-     */
     public function down(): void
     {
-        Schema::dropIfExists('musicas');
+        Schema::table('musicas', function (Blueprint $table) {
+            $table->dropColumn('musica');
+        });
     }
 };

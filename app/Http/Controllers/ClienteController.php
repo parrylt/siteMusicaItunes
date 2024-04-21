@@ -15,7 +15,7 @@ class ClienteController extends Controller
 
     //funcao para o formulario de cadastro do cliente
     public function showFormularioCadastro(Request $request){
-        return view('formularioCadastroCliente');
+        return view('admin/formularioCadastroCliente');
     }
 
     //funcao para resgate dos dados do formulario e envialos para o banco
@@ -36,7 +36,7 @@ class ClienteController extends Controller
     //funcao para mostrar os dados gerenciados para nos
     public function mostrarGerenciarClienteId (Cliente $id){
 
-        return view('formularioAlterarCliente',['registroClientes' => $id]);
+        return view('admin/formularioAlterarCliente',['registroClientes' => $id]);
     }
 
     //funcao para gerenciar os dados
@@ -48,7 +48,7 @@ class ClienteController extends Controller
         });
         $dadosCliente = $dadosCliente->get();
 
-        return view('gerenciarCliente',['registroClientes' => $dadosCliente]);
+        return view('admin/gerenciarCliente',['registroClientes' => $dadosCliente]);
     }
 
     //apagar dados salvos
@@ -73,12 +73,29 @@ class ClienteController extends Controller
         $id->fill($dadosValidos);
         //salvar dados 
         $id->save();
-        return Redirect::route('admin/adminhome');
+        return Redirect::route('adminhome');
+    }
+
+    public function alterarUsuarioBanco(Cliente $id,Request $request){
+
+        //o request e uma variavel que contem os dados cadastrados no formulario por post
+        //ele ira validar se esses dados do validardados existe, so assim para eles serem salvos
+        $dadosValidos = $request->validate([
+            'name' => 'string|required',
+            'email' => 'string|required',
+            'usertype' => 'string|required'
+        ]);
+
+        //fill serve para organizar os dados recadastrados
+        $id->fill($dadosValidos);
+        //salvar dados 
+        $id->save();
+        return Redirect::route('adminhome');
     }
 
     public function mostrarGerenciarUsuarioId (User $id){
 
-        return view('formularioAlterarUsuario',['registroUsarios' => $id]);
+        return view('admin/formularioAlterarUsuario',['registroUsuarios' => $id]);
     }
 
     //funcao para gerenciar os dados
@@ -97,6 +114,6 @@ class ClienteController extends Controller
     public function destroyUser (User $id){
         
         $id->delete();
-        return Redirect::route('admin/adminhome');
+        return Redirect::route('adminhome');
     }
 }

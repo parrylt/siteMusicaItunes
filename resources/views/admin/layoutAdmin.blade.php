@@ -47,8 +47,8 @@
             Clientes
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Cadastro</a></li>
-            <li><a class="dropdown-item" href="#">Gerenciar</a></li>
+            <li><a class="dropdown-item" href="{{route('showFormulario-cadastro')}}">Cadastro</a></li>
+            <li><a class="dropdown-item" href="{{'/gerenciarCliente'}}">Gerenciar</a></li>
         </ul>
         </li>
 
@@ -58,8 +58,8 @@
             Funcionários
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Cadastro</a></li>
-            <li><a class="dropdown-item" href="#">Gerenciar</a></li>
+            <li><a class="dropdown-item" href="{{'/cadastroFuncionarios'}}">Cadastro</a></li>
+            <li><a class="dropdown-item" href="{{'/gerenciarFunci'}}">Gerenciar</a></li>
         </ul>
         </li>
 

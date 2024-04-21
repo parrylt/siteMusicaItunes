@@ -1,14 +1,14 @@
 @extends('admin/layoutAdmin')
 @section('content')
-<form method="POST" action="{{route('envia-banco-musica')}}">
+<form method="POST" action="{{route('envia-banco-musica')}}" enctype="multipart/form-data">
 @csrf
 
 <div class="row mb-3">
-    <label for="inputBanda" class="col-sm-2 col-form-label">Coloque o caminho da imagem corretamente:</label>
+    <label for="inputImagem" class="col-sm-2 col-form-label">Imagem:</label>
     <div class="col-sm-10">
-      <input type="text" class="form-control" id="inputBanda" name="image">
+        <input type="file" class="form-control" id="inputImagem" name="image">
     </div>
-  </div>
+</div>
 
   <div class="row mb-3">
     <label for="inputEmail3" class="col-sm-2 col-form-label">Nome:</label>
@@ -37,6 +37,13 @@
       <input type="number" class="form-control" id="inputPassword3" name="valor">
     </div>
   </div>
+
+  <div class="row mb-3">
+    <label for="inputMusica" class="col-sm-2 col-form-label">Música:</label>
+    <div class="col-sm-10">
+        <input type="file" class="form-control" id="inputMusica" name="musica">
+    </div>
+</div>
 
   <button type="submit" class="btn btn-primary">Cadastrar</button>
 </form>
