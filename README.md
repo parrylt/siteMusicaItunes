@@ -4,18 +4,19 @@ Telas do Site de Musicas
 ![image](https://github.com/parrylt/siteMusicaItunes/assets/132522844/54e5b276-76a6-464b-a867-385e678f1009)
 
 2. Tela login e cadastro
+
 ![image](https://github.com/parrylt/siteMusicaItunes/assets/132522844/a700d514-1a53-4384-8afd-b0b96c66634e)
 ![image](https://github.com/parrylt/siteMusicaItunes/assets/132522844/dfaf137c-3b85-4f85-84e1-4942a3b1412e)
 
-3. Home Usuario
+4. Home Usuario
 ![image](https://github.com/parrylt/siteMusicaItunes/assets/132522844/9e6243b4-535f-4c77-be3f-f44ca856e153)
 
 
-4. Home Admin
+5. Home Admin
 ![image](https://github.com/parrylt/siteMusicaItunes/assets/132522844/d89629aa-d841-4f35-a3e9-be0ae7fb5409)
 
 
-5. **OBS: Para se tornar administrador do site deve-se mudar os dados dentro do phpmyAdmin
+6. **OBS: Para se tornar administrador do site deve-se mudar os dados dentro do phpmyAdmin
 (musicabd/users)
 ![image](https://github.com/parrylt/siteMusicaItunes/assets/132522844/6e04d46f-a06a-46d7-8be1-820d910892c6)
 ![image](https://github.com/parrylt/siteMusicaItunes/assets/132522844/9e8c25f4-3b32-457e-9994-40e0528f16c4)
