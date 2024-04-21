@@ -2,7 +2,7 @@
 @section('content')
 <section class="container m-5">
   <div class="container m-5">
-    <h1 class="text-center">Gerenciar Dados do Funcionário</h1>
+    <h1 class="text-center">Gerenciador de Dados de Funcionário</h1>
     <form method='get' action="{{route('gerenciar-funcionario')}}">
       <div class="row center">
         <div class="col">

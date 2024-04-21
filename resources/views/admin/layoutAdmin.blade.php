@@ -6,8 +6,29 @@
     <title>EtecTunes</title>
     <link rel="icon" href="assets/icon.png" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-</head>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+        }
+        #video-background {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -1000;
+        }
+    </style>
+  </head>
 <body>
+<video autoplay muted loop id="video-background">
+        <source src="assets/videoAdmin.mp4" type="video/mp4">
+    </video>
     <header>
     <nav class="navbar absolute-top navbar-expand-lg bg-body-tertiary ">
   <div class="container-fluid">
@@ -48,7 +69,7 @@
           </a>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="{{route('showFormulario-cadastro')}}">Cadastro</a></li>
-            <li><a class="dropdown-item" href="{{'/gerenciarCliente'}}">Gerenciar</a></li>
+            <li><a class="dropdown-item" href="{{route('gerenciar-cliente')}}">Gerenciar</a></li>
         </ul>
         </li>
 
@@ -58,8 +79,8 @@
             Funcionários
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="{{'/cadastroFuncionarios'}}">Cadastro</a></li>
-            <li><a class="dropdown-item" href="{{'/gerenciarFunci'}}">Gerenciar</a></li>
+            <li><a class="dropdown-item" href="{{route('show-Formulario-funcionario')}}">Cadastro</a></li>
+            <li><a class="dropdown-item" href="{{route('gerenciar-funcionario')}}">Gerenciar</a></li>
         </ul>
         </li>
 

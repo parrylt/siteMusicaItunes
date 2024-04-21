@@ -44,6 +44,9 @@ Route::middleware('auth')->group(function () {
 
 Route::get('/admin-home', [ClienteController::class,'showHome'])->name('showAdmin-home');
 
+Route::view('/admin/adminhome', 'admin.adminhome')->name('admin.adminhome');
+
+
 
 Route::get('/cadastro-cliente', [ClienteController::class,'showFormularioCadastro'])->name('showFormulario-cadastro');
 Route::post('/cadastro-cliente',[ClienteController::class,'cadCliente'])->name('envia-banco-cliente');

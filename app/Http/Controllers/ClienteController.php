@@ -30,7 +30,7 @@ class ClienteController extends Controller
         //o create e para inserir ou criar um novo dado
         Cliente::create($dadosValidos);
 
-        return Redirect::route('admin/adminhome');
+        return Redirect::route('admin.adminhome');
     }
 
     //funcao para mostrar os dados gerenciados para nos
@@ -55,7 +55,7 @@ class ClienteController extends Controller
     public function destroy(Cliente $id){
         
         $id->delete();
-        return Redirect::route('admin/adminhome');
+        return Redirect::route('admin.adminhome');
     }
 
     //alterar dados registrados do cliente
@@ -73,7 +73,7 @@ class ClienteController extends Controller
         $id->fill($dadosValidos);
         //salvar dados 
         $id->save();
-        return Redirect::route('adminhome');
+        return Redirect::route('admin.adminhome');
     }
 
     public function alterarUsuarioBanco(Cliente $id,Request $request){

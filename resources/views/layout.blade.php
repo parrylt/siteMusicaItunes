@@ -26,6 +26,9 @@
     </style>
   </head>
 <body>
+<video autoplay muted loop id="video-background">
+        <source src="assets/videoUser.mp4" type="video/mp4">
+    </video>
     <header>
     <nav class="navbar absolute-top navbar-expand-lg bg-body-tertiary ">
   <div class="container-fluid">
@@ -59,9 +62,7 @@
       <br><br>
         @yield('content')
     </main>
-    <video autoplay muted loop id="video-background">
-        <source src="assets/video.mp4" type="video/mp4">
-    </video>
+
     <footer>
 
 

@@ -20,7 +20,7 @@ class FuncionarioController extends Controller
 
         Funcionario::create($dadosValidos);
 
-        return view('home');
+        return Redirect::route('admin.adminhome');
     }
     
 
@@ -46,7 +46,7 @@ class FuncionarioController extends Controller
     public function destroy(Funcionario $id){
         
         $id->delete();
-        return Redirect::route('home');
+        return Redirect::route('admin.adminhome');
     }
 
     //alterar dados registrados do cliente
@@ -64,7 +64,7 @@ class FuncionarioController extends Controller
         //salvar dados 
         $id->save();
 
-        return Redirect::route('home');
+        return Redirect::route('admin.adminhome');
     }
 
 }

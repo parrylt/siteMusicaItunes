@@ -9,7 +9,6 @@
      
     @foreach($registroMusicas as $registroMusicasLoop)
 
-
       <tr>
       <div class="d-flex justify-content-center">
       <div class="card" style="width: 21rem;">
@@ -23,6 +22,7 @@
         <audio controls>
           <source src="{{$registroMusicasLoop->musica}}" type="audio/mp3">
         </audio>
+        <a href="{{$registroMusicasLoop->musica}}" download class="btn btn-primary mt-3">Baixar Ilegalmente</a>
       </div>
     </div>
   </div>
