@@ -1,44 +1,26 @@
-Telas do Site
+Telas do Site de Musicas
 
-1. CLIENTES
-- Cadastro
-![image](https://github.com/Cristiandiv/appReservaHotel/assets/132522844/332a35cc-3878-47f9-9a00-416487e06c0e)
-- Lista
-![image](https://github.com/Cristiandiv/appReservaHotel/assets/132522844/1bf95655-7651-454e-877f-0bf934eeaa5b)
-- Alterar
-![image](https://github.com/Cristiandiv/appReservaHotel/assets/132522844/159f286b-046c-4b2e-ab15-82b38f22dde9)
-![image](https://github.com/Cristiandiv/appReservaHotel/assets/132522844/ac32b4f5-1df2-42af-aa2b-58ce200b3625)
-- Buscar
-![image](https://github.com/Cristiandiv/appReservaHotel/assets/132522844/fc52b543-514e-41f4-a5ea-85bc93167f15)
-![image](https://github.com/Cristiandiv/appReservaHotel/assets/132522844/953677ab-1668-4ccf-8d8a-a99d33aab231)
+1. Primeira tela
+![image](https://github.com/parrylt/siteMusicaItunes/assets/132522844/54e5b276-76a6-464b-a867-385e678f1009)
 
-2. FUNCIONARIOS
-- Cadastro
-![image](https://github.com/Cristiandiv/appReservaHotel/assets/132522844/93330a94-ae6a-4ca2-a544-f8bba1eb96b7)
-- Lista
-- ![image](https://github.com/Cristiandiv/appReservaHotel/assets/132522844/f12fe502-ca26-43e0-9670-e338fd208836)
-- Alterar
-![image](https://github.com/Cristiandiv/appReservaHotel/assets/132522844/cc25192f-d764-47f1-b372-7c7bcb5bdd34)
-![image](https://github.com/Cristiandiv/appReservaHotel/assets/132522844/2427c823-44a6-493f-aa13-cdf6d42555d9)
-- Buscar
-![image](https://github.com/Cristiandiv/appReservaHotel/assets/132522844/3c5dcfa6-921d-4913-8c3b-668f7f0f1a6b)
-![image](https://github.com/Cristiandiv/appReservaHotel/assets/132522844/2b322b51-2c49-426b-a223-3fe30ad011ae)
+2. Tela login e cadastro
+![image](https://github.com/parrylt/siteMusicaItunes/assets/132522844/a700d514-1a53-4384-8afd-b0b96c66634e)
+![image](https://github.com/parrylt/siteMusicaItunes/assets/132522844/dfaf137c-3b85-4f85-84e1-4942a3b1412e)
+
+3. Home Usuario
+![image](https://github.com/parrylt/siteMusicaItunes/assets/132522844/9e6243b4-535f-4c77-be3f-f44ca856e153)
 
 
-3. QUARTOS
-- Cadastro
-![image](https://github.com/Cristiandiv/appReservaHotel/assets/132522844/a21412bb-d83c-4355-92f7-c0cab12d1460)
-- Lista
+4. Home Admin
+![image](https://github.com/parrylt/siteMusicaItunes/assets/132522844/d89629aa-d841-4f35-a3e9-be0ae7fb5409)
 
-![image](https://github.com/Cristiandiv/appReservaHotel/assets/132522844/9d09d663-04bb-489d-a1b8-ed2af3801d9a)
-- Alterar
 
-![image](https://github.com/Cristiandiv/appReservaHotel/assets/132522844/5ea101ec-bdba-417c-a833-f9153ecf9ef8)
-![image](https://github.com/Cristiandiv/appReservaHotel/assets/132522844/19a60929-0280-4369-b8a8-ff83b6748c64)
-- Buscar
+5. **OBS: Para se tornar administrador do site deve-se mudar os dados dentro do phpmyAdmin
+(musicabd/users)
+![image](https://github.com/parrylt/siteMusicaItunes/assets/132522844/6e04d46f-a06a-46d7-8be1-820d910892c6)
+![image](https://github.com/parrylt/siteMusicaItunes/assets/132522844/9e8c25f4-3b32-457e-9994-40e0528f16c4)
 
-![image](https://github.com/Cristiandiv/appReservaHotel/assets/132522844/27df3295-3a0c-47e8-a20c-15b2d842fb1f)
-![image](https://github.com/Cristiandiv/appReservaHotel/assets/132522844/bc3596d0-ff87-4a6d-ac0e-7962036a42d5)
+
 
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
