@@ -18,45 +18,34 @@
 
 </br>
 
-  <table class="table">
-
-    <tbody>
-     
+<div class="container">
+  <div class="row">
     @foreach($registroMusicas as $registroMusicasLoop)
-
-
-    <tr>
-  <div class="d-flex justify-content-center">
-    <div class="card" style="width: 21rem;">
-      <img src=".{{$registroMusicasLoop->image}}" class="card-img-top" alt="Capa do Álbum">
-      <div class="card-body">
-        <h5 class="card-title text-center fw-bolder">{{$registroMusicasLoop->nome}}</h5>
-        <p class="card-text">Banda: &nbsp; {{$registroMusicasLoop->banda}}</p>
-        <p class="card-text">Gênero: &nbsp; {{$registroMusicasLoop->genero}}</p>
-        <p class="card-text">Valor: &nbsp; {{$registroMusicasLoop->valor}}</p>
-        <audio controls>
-          <source src=".{{$registroMusicasLoop->musica}}" type="audio/mp3">
-        </audio>
-        <div class="d-flex justify-content-evenly">
-          <a href="{{route('mostrar-musicas', $registroMusicasLoop->id)}}" class="btn btn-primary">Editar</a>
-          <form method="post" action="{{route('apaga-musicas', $registroMusicasLoop->id)}}">
-            @method('delete')
-            @csrf
-            <button type="submit" class="btn btn-danger"> X </button>
-          </form>
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src=".{{$registroMusicasLoop->image}}" class="card-img-top" alt="Capa do Álbum">
+          <div class="card-body">
+            <h5 class="card-title text-center fw-bolder">{{$registroMusicasLoop->nome}}</h5>
+            <p class="card-text">Banda: &nbsp; {{$registroMusicasLoop->banda}}</p>
+            <p class="card-text">Gênero: &nbsp; {{$registroMusicasLoop->genero}}</p>
+            <p class="card-text">Valor: &nbsp; {{$registroMusicasLoop->valor}}</p>
+            <audio controls>
+              <source src=".{{$registroMusicasLoop->musica}}" type="audio/mp3">
+            </audio>
+            <div class="d-flex justify-content-evenly mt-3">
+              <a href="{{route('mostrar-musicas', $registroMusicasLoop->id)}}" class="btn btn-primary">Editar</a>
+              <form method="post" action="{{route('apaga-musicas', $registroMusicasLoop->id)}}">
+                @method('delete')
+                @csrf
+                <button type="submit" class="btn btn-danger"> X </button>
+              </form>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-</tr>
-
-      </br>
-
-</div>
-      </tr>
     @endforeach
-    </tbody>
-  </table>
+  </div>
+</div>
 </section>
 
 @endsection
